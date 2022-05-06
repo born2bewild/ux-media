@@ -100,13 +100,18 @@ And import the propoer bootstrap scss class :
 
 ## Usage
 
-Works like [Artgris/MediaBundle](https://github.com/artgris/MediaBundle) except you have to use UxMediaType and UxMediaCollectionType 
+Works like [Artgris/MediaBundle](https://github.com/artgris/MediaBundle)
+Differences: 
+- You have to use UxMediaType and UxMediaCollectionType, instead of MediaType and MediaCollectionType
+- Added orderby form option - more on [Artgris/FileManager](https://github.com/artgris/FileManagerBundle/blob/master/Resources/doc/book/3-access-file-manager.md)
 
 ```php
 $builder->add('Media', UxMediaType::class, [
     'conf' => 'default',
     'display_file_manager' => true,
     'allow_crop' => true,
+    'orderby' => 'date',
+    'order' => 'desc',
     'crop_options' => [
         'display_crop_data' => true,
         'allow_flip' => true,

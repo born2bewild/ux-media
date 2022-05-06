@@ -17,6 +17,8 @@ class UxMediaType extends AbstractType
         $view->vars = array_replace($view->vars, [
             'conf' => $options['conf'],
             'tree' => $options['tree'],
+            'orderby' => $options['orderby'],
+            'order' => $options['order'],
             'extra' => $options['extra'],
             'readonly' => $options['readonly'],
             'allow_crop' => $options['allow_crop'],
@@ -39,6 +41,8 @@ class UxMediaType extends AbstractType
             ],
             'readonly' => false,
             'tree' => 0,
+            'orderby' => null,
+            'order' => null,
             'error_bubbling' => false,
             'display_file_manager' => true,
             'extra' => [],
